@@ -5,7 +5,7 @@ int SumNumAmmount (int S)
 {
     int count = 0;
     int N = S;
-    while (S > 0)
+    while (S != 0)
         {
             N = S % 10;
             count = N + count;
@@ -16,4 +16,4 @@ int SumNumAmmount (int S)
 
 Console.Write("Введите число: ");
 int S = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Сумма цифр в числе равна = {SumNumAmmount(S)}");
+Console.WriteLine($"Сумма цифр в числе равна = {SumNumAmmount(Math.Abs(S))}");
